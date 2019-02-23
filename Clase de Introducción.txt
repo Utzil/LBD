@@ -1,0 +1,25 @@
+Lab. Bade de Datos
+Profesor: José Anastacio Hernández Saldaña
+Email: jhernandez.sld@gmail.com
+
+Practicás totales: 10 prácticas
+(10 temas)
+	
+Plataforma a utilizar:
+github
+	crear un repositorio llamado: LBD
+	cada práctica tendra el nombre de: Practica#.sql
+	
+	
+Forma de evaluar:
+10 practicas con valor de: 10pts c/u
+		TOTAL: 100%
+	
+ultimo día de clase: 11/Mayo/2019
+
+software a utilizar: SQL server
+
+aprender por fuera: 
+	-Docker(aplication)(similar a MV)
+	-Kubernetes
+ 
