@@ -1,0 +1,96 @@
+Tercera Clase de Laboratorio
+
+Algo de la explicación en clase fue:
+
+
+Llave primaria = PK
+
+Identificador = una llave primaria
+	tiene que ser unica
+
+Todas las llaves primarias son indices
+los indices pueden ser de manera ascendente o desendente
+de la manera que ascendente es lo mas habitual
+(en ordendescendente se usa para fechas)
+
+PRÁCTICA 2
+10 tablas (se recomienda que sean tablas de nuestro proyecto final de clase)
+
+	-5 columnas conputadas
+	-dentro de cada una tabla debe de contener 
+	-todas con llave primaria 
+	-10 indices
+	-Usar los tipos de dato:
+		*date
+		*time
+		*money
+		*varchar
+		*uniqueidentifer
+
+
+---------------------------------------------------------------------------
+	Comandos SQL Básicos
+---------------------------------------------------------------------------
+////////Definiendo cómo es almacenada la información./////////
+
+	*CREATE DATABASE
+	 	se utiliza para crear una nueva base de datos vacía.
+   
+	*DROP DATABASE
+		se utiliza para eliminar completamente una base de datos existente.
+
+	*CREATE TABLE
+		se utiliza para crear una nueva tabla, donde la información se almacena realmente.
+	
+	*ALTER TABLE
+		se utiliza para modificar una tabla ya existente.
+
+	*DROP TABLE
+		se utiliza para eliminar por completo una tabla existente. 
+
+////////////////////Manipulando los datos.//////////////////
+
+	*SELECT 
+		se utiliza cuando quieres leer (o seleccionar) tus datos.
+	
+	*INSERT 
+		se utiliza cuando quieres añadir (o insertar) nuevos datos.
+	
+	*UPDATE 
+		se utiliza cuando quieres cambiar (o actualizar) datos existentes.
+	
+	*DELETE 
+		se utiliza cuando quieres eliminar (o borrar) datos existentes.
+	
+	*REPLACE
+		se utiliza cuando quieres añadir o cambiar (o reemplazar) datos nuevos o ya existentes.
+	
+	*TRUNCATE 
+		se utiliza cuando quieres vaciar (o borrar) todos los datos de la plantilla. 
+
+---------------------------------------------------------------------------
+Un ejemplo sencillo.
+---------------------------------------------------------------------------
+
+CREATE DATABASE mydb;
+USE mydb;
+CREATE TABLE mitabla ( id INT PRIMARY KEY, nombre VARCHAR(20) );
+INSERT INTO mitabla VALUES ( 1, 'Will' );
+INSERT INTO mitabla VALUES ( 2, 'Marry' );
+INSERT INTO mitabla VALUES ( 3, 'Dean' );
+SELECT id, nombre FROM mitabla WHERE id = 1;
+UPDATE mitabla SET nombre = 'Willy' WHERE id = 1;
+SELECT id, nombre FROM mitabla;
+DELETE FROM mitabla WHERE id = 1;
+SELECT id, nombre FROM mitabla;
+DROP DATABASE mydb;
+SELECT count(1) from mitabla; da el número de registros en la tabla
+
+
+
+
+
+
+
+
+
