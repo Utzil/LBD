@@ -1,0 +1,43 @@
+Segundo día
+------------------------------------------------------------
+(explicacion de el entorno a trabajar)
+
+
+servidores:
+	*SQLserver (uso en clase)
+	Maria DB/MySQL
+	Mongo DB
+	Posgress
+	Influx DB
+	Oracle DB
+
+
+Clientes (graficos):
+	*SQL Management (lo usaremos en clase)
+	Workbench
+	Robo3T
+	Apiweb
+
+
+Algunas caracteristicas de DB
+-----------------------------------------------------------
+Privilegios de usuario(roles)
+
+Los servidores usan mas la RAM, para no estar leyendo todo el tiempo la DB.
+
+En los contratos de servicio esta una caracteristica llamada "SLA" (99%).
+
+Hay dos tipos de respalñdos en DB el respaldo diferencial y completo.
+
+Tratar de tener una buena costumbre de los Backups que es comprimirlos y 
+guardarlos en un lugar diferente de la DB.
+
+GENERAR SCRIPTS (para subir tarea)
+
+Práctica 1 "hacer respaldo de DB"
+(subirlo a Github)
+Contenido de la DB 
+---------------------------------------------------------------
+create database LBD
+
+
