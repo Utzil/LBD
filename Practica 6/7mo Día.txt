@@ -1,0 +1,64 @@
+Tema de Hoy: CLAUSULAS EN SQL
+
+
+todas las tablas que su nombre comienza con # (ej. " #Respaldo ") para sql esto quiere decir 
+que son temporales solo exiten durante la consulta
+
+clausula "Where"
+
+as
+para juntar varios datos en un valor cuando se hace una consulta 
+
+
+"join" "inner join" (default) "left join" "right join" 
+unir varias tablas perode izquierda a derecha o viseversa
+*necesitas que las tablas sean relacionadas y del mismo tipo
+*llaves foraneas
+
+"outer join"
+para ver los que no hicieron coincidencia
+
+"Group by"
+reduce la cadena de consulta (resume)
+con funciones de degradacion
+
+"having"
+solamente para funciones de agregacion,
+
+EJEMPLOS:
+select * from Empleados
+
+select numero de empleado, Nombre + ' ' + ApellidoPaterno + ' ' + ApellidoMaterno as 'NombreCompleto', dateDiff(YEAR, FechaNacimiento, FechaContratado) as
+from Empleados
+
+select 'Hola',  'a', 'Todos', 123
+
+select empleados.*, ventas.*
+From empleados
+join ventas on Ventas.IdEmpleadosVenta = Empleados.id
+where DiasAntiguedad >100
+
+PRACTICA #6
+10 Reportes los cuales pueden ser (según su proyecto):
+	-que empleados vendio mas en el mes
+	-que chofer hizo mas horas
+	-cuantos empleados tengo contratados
+	-el maestro con mayor clases en la facultad
+	-promedio de clases de alumnos
+	-producto mas vendido
+	-producto faltante en inventario
+
+cada reporte tendrá:
+	GRUP y funciones de segregación(minimo, maximo, etc)
+	
+	alias en tablas y columnas
+	diferentes funciones de segregación (redondear, iva, etc)
+	10 select basicos 
+		select
+		from
+		join
+		5 join
+		1 select into, drop -insert into select
+	
+
+
