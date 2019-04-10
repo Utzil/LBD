@@ -1,0 +1,14 @@
+5to Día
+"Alter Table"
+------------------------------------------
+restricciones check
+empezar Modelado relacional
+ALTER TABLE [DBO]. [CLIENTES]
+
+------------------------------------------
+Practica #4
+correccion de errores de la 
+Base de Datos del modelo relacional
+
+
+
