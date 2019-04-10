@@ -1,0 +1,113 @@
+Tema de hoy "procesos almacenados, intrucciones de controles y Triggers"
+--------------------------------------------------------------
+es un script que esta guardado en una
+base de datos que termina como 
+una tipo de funcion
+
+
+estos procesos almacenados sirven para
+evitar inyecciones de SQL
+
+
+ciclos = cursores
+"for each" se usa para los cursores, se usa como un for
+normal pero con mas pasos
+
+no se recomiendadn debido a que son lentos, 
+es mejor hacer directamente las consultas
+
+las funciones no se ejecutan como los procesos
+almacenados sino como una consulta
+
+
+		TRIGGERSS
+------------------------------------------------------------------------
+estan al pendiente de nustros procesos (insert, delete, update).
+Los triggers se pueden ejecutar antes, despues o en el momento
+de cierto proceso.
+
+Estan a nivel tabla
+------------------------------------------------------------------------
+
+"qwerys dinamicos"
+------------------------------------------------------------------------
+utiles para reportes de base
+dificiles de bbugear (tiene dificultad encontrar el error)
+
+------------------------------------------------------------------------
+
+---------------------------------------
+	Ejemplos
+---------------------------------------
+
+	Ejemplo 1
+------------------------------------------------------------------------
+create procedure ReporteAleatorio
+(@valor1 int)
+as
+begin
+	if @valor > 0+then
+	begin
+		select * from dbo.inventarioAlmacenProductos
+		where Cantidad > @valor1
+	else
+	
+		select * from  dbo.inventarioAlmacenProductos
+		where Cantidad > 0
+	end
+end
+
+execute ReporteAleatorio 1
+-------------------------------------------------------------------------
+
+		Ejemplo 2 
+	(sintaxis para un for each)
+------------------------------------------------------------------------
+    DECLARE product_cursor CURSOR FOR   
+    SELECT v.Name  
+    FROM Purchasing.ProductVendor pv, Production.Product v  
+    WHERE pv.ProductID = v.ProductID AND  
+    pv.VendorID = @vendor_id  -- Variable value from the outer cursor  
+  
+    OPEN product_cursor  
+    FETCH NEXT FROM product_cursor INTO @product  
+  
+    IF @@FETCH_STATUS <> 0   
+        PRINT '         <<None>>'       
+  
+    WHILE @@FETCH_STATUS = 0  
+    BEGIN  
+  
+        SELECT @message = '         ' + @product  
+        PRINT @message  
+        FETCH NEXT FROM product_cursor INTO @product  
+        END  
+  
+    CLOSE product_cursor  
+    DEALLOCATE product_cursor  
+
+------------------------------------------------------------------------
+
+	Ejemplo 3
+
+------------------------------------------------------------------------
+alter fuction FnSUma (@v1 int, @v2 int)
+as
+begin
+	RETURN @v1 + @v2
+end
+
+select dbo.fnSuma(9,100)
+
+
+------------------------------------------------------------------------
+
+
+---------------------------------------
+Practica #8
+---------------------------------------
+
+2 Tiggers 
+10 sp (1 por cada reporte)
+1 funcion
+1 query Dinamico
