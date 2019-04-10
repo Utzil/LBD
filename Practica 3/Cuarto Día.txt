@@ -1,0 +1,42 @@
+Cuarto Día
+-------------------------------------------
+
+¿Qué es un CRUD?
+	= CRUD (Create, Read, Update, Delete) es 
+	un acrónimo para las maneras en las que se 
+	puede operar sobre información almacenada. 
+	Es un nemónico para las cuatro funciones 
+	del almacenamiento persistente. 
+-------------------------------------------
+Buscar las fases de normalización
+	= El proceso de normalización de bases de 
+	datos consiste en designar y aplicar una 
+	serie de reglas a las relaciones obtenidas 
+	tras el modelo entidad-relación.
+
+	Las bases de datos relacionales se 
+	normalizan para:
+		*Evitar la redundancia de los datos.
+		*Disminuir problemas de actualización
+		 de los datos en las tablas.
+		*Proteger la integridad de los datos.
+
+	vease: 
+		https://ed.team/blog/normalizacion-de-bases-de-datos
+-------------------------------------------
+Grupos repetidos
+	
+
+
+-------------------------------------------
+Varios CRUDs:
+	laravel
+	django
+	asp.rzor
+	cake php
+
+
+PRACTICA #3
+	crear modelos relacionales de nuestro proyecto final
+	entregable: solo una screenshot
+	
