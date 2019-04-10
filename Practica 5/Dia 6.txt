@@ -1,0 +1,7 @@
+inserts
+
+Practica 5 
+------------------------------------------
+110 inserts a la base de datos 
+de nuestro proyecto final
+(10 insert por tabla aprox)
