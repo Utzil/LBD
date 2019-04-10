@@ -1,0 +1,40 @@
+--------------------------------------------------------------------
+		Día Ocho
+--------------------------------------------------------------------
+----vistas "View"
+para hacer consultas solo una vez
+para volver a usarla
+sirve para obtener la informacion 
+de una consulta (select * from _____)
+las visatas tienen la propiedad de 
+unirse con otras vistas
+
+
+----sub consulta
+Requiere un mayor tiempo una sub consulta
+que una view
+
+----consuta  "with"
+
+
+----plan de ejecucion
+
+
+--------------------------------------------------------------------
+	      Ejemplos en clase:
+--------------------------------------------------------------------
+vistas
+create view  VentasView as
+select v.*, e.NumeroEmpleado, e.ApellidoPaterno + ' ' +
+from ventas v
+left join Enmpleados e on v.IdEmpleadoVenta = e.Id
+go
+--------------------------------------------------------------------
+	Practica 7
+--------------------------------------------------------------------
+hacer una consulta "View"
+con cada tabla ya creada
+de nuestra base de datos que tenemos 
+hasta ahora
+
+
